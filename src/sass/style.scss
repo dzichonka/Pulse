@@ -1,6 +1,7 @@
 @import 'base/fonts';
 @import 'base/variables';
 
+
 * {
     font-family: Museo Sans Cyrl, sans-serif;
 }
@@ -8,8 +9,13 @@
 .container {
     max-width: 950px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 @import 'blocks/promo';
 @import 'blocks/header';
-@import 'blocks/_buttons';
+@import 'blocks/buttons';
+@import 'blocks/advantages';
+@import 'blocks/title';
+
+@import 'base/media';
