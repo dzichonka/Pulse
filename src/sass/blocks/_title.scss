@@ -6,4 +6,11 @@
     letter-spacing: normal;
     line-height: normal;
     text-align: center;
+    text-transform: uppercase;
+
+    &_left {
+        color: #ffffff;
+        font-size: 36px;
+        text-align: left;
+    }
 }
