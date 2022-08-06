@@ -7,15 +7,15 @@
         margin: 0 auto;
     }
 
-    .slick-prev,
-    .slick-next {
+    .prev,
+    .next {
         position: absolute;
         border: none;
         background-color: white;
         z-index: 2;
         top: 50%;
         transform: translateY(-50%);
-        left: -66px;
+        left: 0px;
 
         img {
             width: 31px;
@@ -23,9 +23,48 @@
         }
     }
 
-    .slick-next {
+    .next {
         left: auto;
-        right: -66px;
+        right: 0px;
 
+    }
+
+    .tns-item {
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+    .tns-nav {
+
+
+        button {
+            position: absolute;
+            left: 50%;
+            background-color: grey;
+            border: none;
+            height: 10px;
+            width: 10px;
+            border-radius: 100%;
+
+        }
+
+        :nth-child(1) {
+            transform: translateX(-250%);
+        }
+
+        :nth-child(2) {
+            transform: translateX(-50%);
+        }
+
+        :nth-child(3) {
+            transform: translateX(150%);
+        }
+
+        .tns-nav-active {
+            background-color: black;
+
+        }
     }
 }

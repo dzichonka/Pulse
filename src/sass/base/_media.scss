@@ -43,14 +43,22 @@
     }
 
     .carousel {
-        &__wrapper {
+        .tns-item {
+            img {
+                width: 650px;
+            }
+        }
+
+        /*         &__wrapper {
             width: 650px;
 
             img {
                 width: 100%;
             }
-        }
+        } */
     }
+
+
 }
 
 @media (max-width: 767px) {
