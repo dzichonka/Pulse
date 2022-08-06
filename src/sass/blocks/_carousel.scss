@@ -1,11 +1,35 @@
 .carousel {
     padding: 81px 0 82px 0;
 
-    &__wrapper {
+    .container {
+        padding: 0;
+    }
+
+    &-inner {
+        justify-content: space-between;
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    &-control-prev {
+        justify-content: start;
+    }
+
+    &-control-next {
+        justify-content: end;
+
+        img {
+            margin: 0 0 0 -15px;
+        }
+    }
+
+
+    /*     &__wrapper {
         position: relative;
         width: 750px;
         margin: 0 auto;
     }
+
 
     .prev,
     .next {
@@ -66,5 +90,5 @@
             background-color: black;
 
         }
-    }
+    } */
 }
