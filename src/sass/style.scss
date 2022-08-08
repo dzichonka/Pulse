@@ -10,7 +10,6 @@
     position: relative;
     max-width: 950px;
     margin: 0 auto;
-    padding: 0 10px;
 }
 
 @import 'blocks/promo';
@@ -21,5 +20,6 @@
 @import 'blocks/consultation';
 @import 'blocks/forms';
 @import 'blocks/carousel';
+@import 'blocks/catalog';
 
 @import 'base/media';

@@ -1,0 +1,129 @@
+.catalog {
+    padding-bottom: 100px;
+
+    &__tabs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 70px 0 0 0;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__tab {
+        margin: 0 5px;
+        width: 222px;
+        height: 52px;
+        background: rgba(0, 0, 0, 0.0001);
+        border: 2px solid #D0D0D0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        line-height: 52px;
+        text-transform: uppercase;
+        color: #6B6B6B;
+        transform: skewX(-25deg);
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover {
+            box-shadow: 3px 3px 5px $red;
+        }
+
+        div {
+            transform: skewX(25deg);
+        }
+
+        &_active {
+            background: $red;
+            color: #fff;
+            border: none;
+        }
+    }
+
+    &__content {
+        margin-top: 60px;
+    }
+
+    &-item {
+        width: 300px;
+        min-height: 440px;
+        border: 2px solid #E8E8E8;
+        padding: 20px 19px 19px 20px;
+
+        &__img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 200px;
+        }
+
+        &__title {
+            margin-top: 20px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+
+        &__dscr {
+            margin-top: 16px;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            color: #0D0D0D;
+        }
+
+        &__link {
+            display: block;
+            margin-top: 17px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+            text-align: center;
+            text-decoration-line: underline;
+            color: $red;
+
+            &:hover {
+                color: $red;
+            }
+        }
+
+        hr {
+            margin: 17px 0;
+            background: #E8E8E8;
+            border-bottom: none;
+
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__old-price {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 14px;
+            text-decoration-line: line-through;
+            color: #555555;
+        }
+
+        &__new-price {
+            margin-top: 4px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 20px;
+            color: #050505;
+        }
+    }
+}
