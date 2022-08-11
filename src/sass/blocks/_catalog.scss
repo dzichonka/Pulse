@@ -25,7 +25,7 @@
         color: #6B6B6B;
         transform: skewX(-25deg);
         cursor: pointer;
-        transition: .5s;
+        transition: .5s all;
 
         &:hover {
             box-shadow: 3px 3px 5px $red;
@@ -43,14 +43,87 @@
     }
 
     &__content {
-        margin-top: 60px;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        display: none;
+
+        &_active {
+            display: flex;
+        }
     }
 
     &-item {
         width: 300px;
-        min-height: 440px;
+        min-height: 442px;
         border: 2px solid #E8E8E8;
-        padding: 20px 19px 19px 20px;
+        padding: 20px;
+        overflow: hidden;
+        margin: 8px;
+
+
+        &__wrapper {
+            display: flex;
+            min-height: 340px;
+            width: calc(200% + 40px);
+        }
+
+        &__main {
+            position: relative;
+            width: 50%;
+            margin-right: 0px;
+            transform: translateX(-100%);
+            padding-right: 20px;
+            transition: .5s all;
+            flex-shrink: 0;
+
+            &_active {
+                transform: translateX(0%);
+            }
+        }
+
+        &__details {
+            position: relative;
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            margin-bottom: 0;
+            transition: .5s all;
+
+            &_active {
+                transform: translateX(100%);
+            }
+
+            ul {
+                padding-left: 19px;
+                list-style-type: none;
+
+                li {
+                    position: relative;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 14px;
+                    line-height: 21px;
+                    color: #555555;
+                    margin-bottom: 20px;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: $red;
+                        left: -14px;
+                        top: 8px;
+                    }
+                }
+            }
+
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+            }
+        }
 
         &__img {
             display: block;
@@ -60,7 +133,7 @@
         }
 
         &__title {
-            margin-top: 20px;
+            margin-top: 15px;
             font-style: normal;
             font-weight: 700;
             font-size: 16px;
@@ -69,8 +142,8 @@
             color: #0D0D0D;
         }
 
-        &__dscr {
-            margin-top: 16px;
+        &__descr {
+            margin-top: 15px;
             font-style: normal;
             font-weight: 300;
             font-size: 14px;
@@ -79,16 +152,23 @@
             color: #0D0D0D;
         }
 
-        &__link {
+        &__link-main,
+        &__link-details {
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 10px));
             display: block;
-            margin-top: 17px;
             font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 14px;
             text-align: center;
             text-decoration-line: underline;
+            text-transform: uppercase;
             color: $red;
+            cursor: pointer;
 
             &:hover {
                 color: $red;
