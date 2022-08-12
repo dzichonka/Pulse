@@ -1,0 +1,61 @@
+.footer {
+    position: relative;
+    height: 630px;
+
+    &__info {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        height: 270px;
+        width: 450px;
+        background-color: $red;
+    }
+
+    &__address {
+        margin-top: 50px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &__phone {
+        display: block;
+        margin: 36px auto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: #FFFFFF;
+
+        &:hover {
+            color: #FFFFFF;
+        }
+    }
+
+    &__sonets {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__sonet-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        background: rgba(0, 0, 0, 0.0001);
+        border-radius: 100%;
+        border: 2px solid #FFFFFF;
+        margin: 0 14px;
+
+        img {
+            height: 25px;
+        }
+    }
+}
