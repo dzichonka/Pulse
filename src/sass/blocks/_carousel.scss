@@ -14,10 +14,18 @@
 
     &-control-prev {
         justify-content: start;
+
+        &-icon {
+            width: 0px;
+        }
     }
 
     &-control-next {
         justify-content: end;
+
+        &-icon {
+            width: 0px;
+        }
 
         img {
             margin: 0 0 0 -15px;
