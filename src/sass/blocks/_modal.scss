@@ -7,13 +7,16 @@
 
 }
 
+#thanks {
+    height: 140px;
+}
+
 .modal {
     display: block;
     overflow: visible;
     position: absolute;
     width: 382px;
-    height: 20px;
-    min-height: 402px;
+    height: 402px;
     background: #F2F2F2;
     top: 50%;
     left: 50%;
