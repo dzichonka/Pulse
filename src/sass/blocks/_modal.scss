@@ -1,4 +1,5 @@
 .overlay {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -7,8 +8,10 @@
 
 }
 
+#consultation,
+#order,
 #thanks {
-    height: 140px;
+    display: none;
 }
 
 .modal {
@@ -59,4 +62,8 @@
     .feed-form {
         margin: 26px auto 0 auto;
     }
+}
+
+.modal_mini {
+    height: 140px;
 }

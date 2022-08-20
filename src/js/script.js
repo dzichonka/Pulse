@@ -35,6 +35,10 @@ $(document).ready(function () {
     toggleSlider('.catalog-item__link-main');
     toggleSlider('.catalog-item__link-details');
 
+    //modal
+
+    $('[data-modal=consultation]').hide();
+
     // //     $('.carousel__wrapper').slick({
     // //         speed: 1000,
     // //         prevArrow: '<button type="button" class="slick-prev"><img src="icons/arrows/left.svg"></button>',
