@@ -37,7 +37,21 @@ $(document).ready(function () {
 
     //modal
 
-    $('[data-modal=consultation]').hide();
+    $('[data-modal=consultation]').on('click', function () {
+        $('.overlay, #consultation').show();
+    });
+
+    $('.button_mini').each(function (i) {
+        $(this).on('click', function (e) {
+            e.preventDefault();
+            $('#order .modal__descr').text($('.catalog-item__title').eq(i).text());
+            $('.overlay, #order').show();
+        })
+    });
+
+    $('.modal__close').on('click', function () {
+        $('.overlay, #order').hide();
+    });
 
     // //     $('.carousel__wrapper').slick({
     // //         speed: 1000,
