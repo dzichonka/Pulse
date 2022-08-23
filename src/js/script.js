@@ -38,7 +38,7 @@ $(document).ready(function () {
     //modal
 
     $('[data-modal=consultation]').on('click', function () {
-        $('.overlay, #consultation').show();
+        $('.overlay, #consultation').fadeIn();
     });
 
     $('.button_mini').each(function (i) {
@@ -52,6 +52,8 @@ $(document).ready(function () {
     $('.modal__close').on('click', function () {
         $('.overlay, #order').hide();
     });
+
+    $('.feed-form').validate();
 
     // //     $('.carousel__wrapper').slick({
     // //         speed: 1000,
