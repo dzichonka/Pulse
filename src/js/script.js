@@ -38,19 +38,19 @@ $(document).ready(function () {
     //modal
 
     $('[data-modal=consultation]').on('click', function () {
-        $('.overlay, #consultation').fadeIn();
+        $('.overlay, #consultation').fadeIn('slow');
     });
 
     $('.button_mini').each(function (i) {
         $(this).on('click', function (e) {
             e.preventDefault();
             $('#order .modal__descr').text($('.catalog-item__title').eq(i).text());
-            $('.overlay, #order').show();
+            $('.overlay, #order').fadeIn('slow');
         })
     });
 
     $('.modal__close').on('click', function () {
-        $('.overlay, #order').hide();
+        $('.overlay, #order').fadeOut('slow');
     });
 
     $('.feed-form').validate();
