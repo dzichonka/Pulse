@@ -53,7 +53,82 @@ $(document).ready(function () {
         $('.overlay, #order').fadeOut('slow');
     });
 
-    $('.feed-form').validate();
+    // $('#consultation-form').validate();
+    // $('#consultation form').validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //             minlength: 2,
+    //         },
+    //         phone: {
+    //             required: true,
+    //             minlength: 7,
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true,
+    //             minlength: 7,
+    //         },
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: "Пожалуйста, введите свое имя",
+    //             minlength: jQuery.validator.format("At least {0} characters required!")
+    //         },
+    //         phone: {
+    //             required: "Пожалуйста, введите свой номер телеона",
+    //             minlength: jQuery.validator.format("At least {0} characters required!")
+    //         },
+    //         email: {
+    //             required: "Пожалуйста, введите свой почтовый адрес",
+    //             email: "Ваш почтовый адрес должен быть в формате name@domain.com",
+    //             minlength: jQuery.validator.format("Почтовый адрес должен состоять минимум из {0} знаков")
+    //         },
+    //     }
+    // });
+    // $('#order form').validate();
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2,
+                },
+                phone: {
+                    required: true,
+                    minlength: 7,
+                },
+                email: {
+                    required: true,
+                    email: true,
+                    minlength: 7,
+                },
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста, введите свое имя",
+                    minlength: jQuery.validator.format("At least {0} characters required!")
+                },
+                phone: {
+                    required: "Пожалуйста, введите свой номер телеона",
+                    minlength: jQuery.validator.format("At least {0} characters required!")
+                },
+                email: {
+                    required: "Пожалуйста, введите свой почтовый адрес",
+                    email: "Ваш почтовый адрес должен быть в формате name@domain.com",
+                    minlength: jQuery.validator.format("Почтовый адрес должен состоять минимум из {0} знаков")
+                },
+            }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+
+
 
     // //     $('.carousel__wrapper').slick({
     // //         speed: 1000,
