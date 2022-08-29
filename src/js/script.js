@@ -167,6 +167,35 @@ $(document).ready(function () {
 
     });
 
+    //smooth scroll and pageup
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 1500) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $(window).ready(function () {
+        const margin = 50; // переменная для контроля докрутки
+        $("a[href^='#']").click(function () { // тут пишите условия, для всех ссылок или для конкретных
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top + margin + "px" // .top+margin - ставьте минус, если хотите увеличить отступ
+            }, {
+                duration: 1600, // тут можно контролировать скорость
+                easing: "swing"
+            });
+            return false;
+        });
+    });
+
+    // $("a[href^='#']").click(function () {
+    //     const _href = $(this).attr("href");
+    //     $("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+    //     return false;
+    // });
+
 
 
 
