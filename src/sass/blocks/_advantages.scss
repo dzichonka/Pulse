@@ -19,6 +19,19 @@
 
     &__icon {
         width: 70px;
+
+        &_animated {
+            animation: heartbeat 1.5s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+            /*             animation-name: heartbeat;
+            animation-duration: 1.5s;
+            animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+            animation-iteration-count: infinite; */
+
+            &:hover {
+                animation-play-state: paused;
+            }
+
+        }
     }
 
     &__header {

@@ -196,6 +196,20 @@ $(document).ready(function () {
     //     return false;
     // });
 
+    wow = new WOW(
+        {
+            boxClass: 'wow',      // default
+            animateClass: 'animate__animated', // default
+            offset: 2,          // default
+            mobile: true,       // default
+            live: true        // default
+        }
+    )
+
+    new WOW().init();
+
+
+
 
 
 
