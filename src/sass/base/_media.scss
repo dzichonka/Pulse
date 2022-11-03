@@ -280,7 +280,7 @@
 @media (max-width: 490px) {
     .carousel {
         &__wrapper {
-            width: 430px;
+            width: 440px;
         }
     }
 
@@ -309,6 +309,12 @@
 }
 
 @media (max-width: 440px) {
+    .carousel {
+        &__wrapper {
+            width: 320px;
+        }
+    }
+
     .overlay {
         .modal {
             width: 300px;
